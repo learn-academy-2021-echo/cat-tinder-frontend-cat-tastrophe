@@ -5,9 +5,10 @@ import React, { Component } from 'react';
 
 
 
-    return <footer className="footer">
+    return(
+       <footer className="footer">
             Created by Cat-tastrophe  </footer>
-        
+    )    
   }
 }
 export default Footer

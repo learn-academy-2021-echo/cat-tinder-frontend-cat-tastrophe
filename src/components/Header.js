@@ -5,7 +5,8 @@ class Header extends Component {
   
   
 render() {
-  return  <div className="header">
+  return(
+      <div className="header">
     Cat Tinder
     <h4> A dating app for your feline </h4>
   
@@ -13,7 +14,7 @@ render() {
     
     
     
-    
+  )
   }
 }
 export default Header
