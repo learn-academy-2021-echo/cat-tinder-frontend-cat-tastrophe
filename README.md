@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+'''
+$ yarn create react-app cat-tinder-frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Add the remote from your GitHub classroom repository
 
-## Available Scripts
+Create a default branch (main)
 
-In the project directory, you can run:
+Make an initial commit to the repository
 
-### `yarn start`
+$ yarn start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*** Created Components Files
+Header.js 
 
-### `yarn test`
+Footer.js 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+** Created Page files 
+Home.js 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+CatIndex.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+CatShow.js 
 
-### `yarn eject`
+CatNew.js 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+CatEdit.js 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+NotFound.js 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+$ yarn add bootstrap
 
-## Learn More
+$ yarn add reactstrap
+Added import 'bootstrap/dist/css/bootstrap.min.css'  to src/index.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+''' Added mockCats
+src/mockCats.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+let cats = [
+  {
+    id: 1,
+    name: "Mittens",
+    age: 5,
+    enjoys: "sunshine and warm spots",
+    image: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+  },
+  {
+    id: 2,
+    name: "Raisins",
+    age: 4,
+    enjoys: "being queen of the dogs",
+    image: "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80"
+  },
+  {
+    id: 3,
+    name: "Toast",
+    age: 1,
+    enjoys: "getting all the attention",
+    image: "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+  }
+]
+export default cats
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+'''
+import mockCats from './mockCats.js'
 
-### Analyzing the Bundle Size
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      cats: mockCats
+    }
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  $ yarn add react-router-dom@5.3.0
 
-### Making a Progressive Web App
+  import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+''' 
+<!-- <Router>
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/catindex" component={CatIndex} />
+    <Route path="/catshow" component={CatShow} />
+    <Route path="/catnew" component={CatNew} />
+    <Route path="/catedit" component={CatEdit} />
+    <Route component={NotFound}/>
+  </Switch>
+</Router> -->
