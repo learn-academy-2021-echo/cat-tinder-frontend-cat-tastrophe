@@ -5,12 +5,10 @@ import CatShow from "./CatShow";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-
 describe("When CatShow renders", () => {
-    it("displays a heading", () => {
-      const catShow = shallow(<CatShow />);
-      const catShowHeading = catShow.find("h3").text();
-      expect(catShowHeading).toEqual(" Cat Show Page ");
-    });
+  it("displays a heading", () => {
+    const catShow = shallow(<CatShow />);
+    const catShowHeading = catShow.find("h3").text();
+    expect(catShowHeading).toEqual(" You Selected ");
   });
-  
+});

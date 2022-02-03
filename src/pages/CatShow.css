@@ -1,7 +1,11 @@
-
-.catShow{
-    text-align: center;
-    color: black;
-    
+.catShow {
+  text-align: center;
+  color: black;
 }
-
+.cardcontainer {
+  display: block;
+  margin: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: 45%;
+}
