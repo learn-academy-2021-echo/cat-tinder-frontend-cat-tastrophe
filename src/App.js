@@ -14,6 +14,7 @@ import './components/Footer.css';
 import './pages/NotFound.css';
 import './pages/Home.css';
 import './pages/CatShow.css';
+import './pages/CatNew.css';
 import {
   BrowserRouter as Router,
   Route,
