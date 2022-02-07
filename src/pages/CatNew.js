@@ -16,6 +16,7 @@ class CatNew extends Component {
     };
   }
   handleChange = (e) => {
+    console.log(e.target.value)
     let { newCat } = this.state;
     newCat[e.target.name] = e.target.value;
     this.setState({ newCat: newCat });
@@ -28,7 +29,7 @@ class CatNew extends Component {
 
   render() {
     return (
-      <div className="createNew">
+      <>
         <h3> Create a new profile </h3>
         <Form className="form">
           <FormGroup>
@@ -39,35 +40,41 @@ class CatNew extends Component {
               onChange={this.handleChange}
               value={this.state.newCat.name}
             />
+            </FormGroup>
+            <FormGroup>
             <Label for="age">Age</Label>
             <Input
-              type="text"
-              age="age"
+              type="number"
+              name="age"
               onChange={this.handleChange}
               value={this.state.newCat.age}
             />
+            </FormGroup>
+            <FormGroup>
             <Label for="enjoys">Enjoys</Label>
             <Input
               type="text"
-              enjoys="enjoys"
+              name="enjoys"
               onChange={this.handleChange}
               value={this.state.newCat.enjoys}
             />
+            </FormGroup>
+            <FormGroup>
             <Label for="image">Upload an image</Label>
             <Input
-              type="url"
-              image="image"
+              type="text"
+              name="image"
               onChange={this.handleChange}
-              value={this.state.newCat.name}
+              value={this.state.newCat.image}
             />
+            </FormGroup>
 
             <Button name="submit" onClick={this.handleSubmit}>
               Create a New Profile
             </Button>
-          </FormGroup>
         </Form>
         {this.state.submitted && <Redirect to="/catindex" />}
-      </div>
+      </>
     );
   }
 }
