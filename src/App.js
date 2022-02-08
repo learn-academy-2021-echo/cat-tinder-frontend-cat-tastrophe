@@ -39,6 +39,19 @@ class App extends Component {
       .catch((errors) => console.log("Cat read errors:", errors));
   };
 
+  createCat = (newCat) => {
+    fetch("http://localhost:3000/cats", {
+      body: JSON.stringify(newCat),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then((payload) => this.readCat())
+      .catch((errors) => console.log("Cat create errors:", errors));
+  };
+
   render() {
     return (
       <div className="body">
