@@ -7,6 +7,7 @@ import { Collapse,
    NavItem, 
    NavLink } from 'reactstrap';
 
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -26,10 +27,10 @@ render() {
   return(
       <div className="header">
     Cat Tinder
-    <h4> A dating app for your feline </h4>
+    <h2> A dating app for your feline </h2>
     <Navbar className="navBar" color="faded" light>
           <NavbarBrand href="/" className="mr-auto"></NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <NavbarToggler onClick={this.toggleNavbar} className="mr2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>

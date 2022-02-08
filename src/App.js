@@ -15,6 +15,7 @@ import "./pages/NotFound.css";
 import "./pages/Home.css";
 import "./pages/CatShow.css";
 import "./pages/CatNew.css";
+import "./pages/CatIndex.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -26,7 +27,7 @@ class App extends Component {
   }
 
   createCat = (cat) => {
-    console.log(cat);
+    
   };
 
   render() {

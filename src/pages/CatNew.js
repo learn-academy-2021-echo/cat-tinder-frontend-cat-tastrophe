@@ -30,7 +30,8 @@ class CatNew extends Component {
   render() {
     return (
       <>
-        <h3> Create a new profile </h3>
+        <h3 className="npheader"> Create a new profile </h3>
+        <br></br>
         <Form className="form">
           <FormGroup>
             <Label for="name">Name</Label>
@@ -69,7 +70,7 @@ class CatNew extends Component {
             />
             </FormGroup>
 
-            <Button name="submit" onClick={this.handleSubmit}>
+            <Button name="submit" className="submitButton" onClick={this.handleSubmit}>
               Create a New Profile
             </Button>
         </Form>

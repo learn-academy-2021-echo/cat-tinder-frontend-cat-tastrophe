@@ -10,7 +10,7 @@ describe("When CatIndex renders", () => {
     it("displays a heading", () => {
       const catIndex = shallow(<CatIndex />);
       const catIndexHeading = catIndex.find("h3").text();
-      expect(catIndexHeading).toEqual(" Cat Index Page ");
+      expect(catIndexHeading).toEqual(" Hot local cats in your area ");
     });
   });
   

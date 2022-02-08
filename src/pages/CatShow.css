@@ -2,10 +2,17 @@
   text-align: center;
   color: black;
 }
-.cardcontainer {
-  display: block;
+
+
+
+
+.card{
+  font-size: 20px;
+  font-family: cursive;
+  color:black;
+  height: 400px;
+  width: 500px;
+  text-align: center;
   margin: auto;
-  /* margin-left: auto;
-  margin-right: auto; */
-  width: 45%;
+
 }

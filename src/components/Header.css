@@ -1,18 +1,17 @@
 .header{
     text-align: center;
     color:#47e1ec;
-    /* color:#aa7ae9; */
+    text-shadow: 5px 5px black;
     font-size: 100px;
     font-family: cursive;
-    /* height:200px; */
     background-color: white;
     margin: 10px;
-    /* border-style: outset;
-    border-color: #aa7ae9;
-    border-radius: 10px; */
-}
+    text-shadow: -1px 0 rgb(172, 104, 235), 0 1px rgb(172, 104, 235), 1px 0 rgb(172, 104, 235), 0 -1px rgb(172, 104, 235);
+
+}    
 
 .navBar{
     font-size: 30px;
 }
+    
 

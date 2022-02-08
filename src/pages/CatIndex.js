@@ -7,16 +7,21 @@ import { NavLink } from 'react-router-dom'
   render() {
     
     return (
-        <>  
-            <h3> Cat Index Page </h3>
+        <div className="catindex">  
+             <h3 className="indexheader">Hot local cats in your area</h3> 
+             
+          
             {this.props.cats && this.props.cats.map(cat => {
               return(
                 <p key={cat.id}>
-                <NavLink to={`/catshow/${cat.id}`} >{cat.name}</NavLink> 
+                <NavLink className="link" to={`/catshow/${cat.id}`}> {cat.name} <br></br>
+                <img className="catimage" src={cat.image}></img>
+                 
+                </NavLink> 
                 </p>
               )
             })}
-        </>
+        </div>
     )
   }
 }
