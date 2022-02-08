@@ -1,6 +1,9 @@
 .catShow {
   text-align: center;
   color: black;
+  font-size: 40px;
+  font-family: cursive;
+  text-shadow: -1px 0 #47e1ec, 0 1px rgb(172, 104, 235), 1px 0 rgb(172, 104, 235), 0 -1px #47e1ec;
 }
 
 
