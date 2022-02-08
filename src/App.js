@@ -22,13 +22,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cats: mockCats,
+      cats: []
     };
   }
 
   createCat = (cat) => {
     
   };
+
+  componentDidMount(){
+    this.readCat()
+  }
+
+  readCat = () => {
+    fetch("http://localhost:3000/cats")
+    .then(response => response.json())
+    .then(catsArray => this.setState({cats: catsArray}))
+    .catch(errors => console.log("Cat read errors:", errors))
+  }
+    
 
   render() {
     return (
